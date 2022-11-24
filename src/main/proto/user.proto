@@ -1,0 +1,17 @@
+syntax = "proto3";
+option java_multiple_files = false;
+option java_package = "com.example.user.proto";
+option java_outer_classname = "UserProto";
+package user;
+
+service UserService {
+  rpc hi(StringRequest) returns (StringResponse) {}
+}
+
+message StringRequest {
+  string name = 1;
+}
+
+message StringResponse {
+  string result = 1;
+}
